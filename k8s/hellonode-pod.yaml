@@ -1,0 +1,13 @@
+# k8s/hellonode-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellonode-pod
+  labels:
+    app: app-hellonode
+spec:
+  containers:
+  - name: hellonode-pod
+    image: kantmuyu/hellonode:v0
+    ports:
+    - containerPort: 3001

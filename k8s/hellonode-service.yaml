@@ -1,0 +1,15 @@
+# k8s/hellonode-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: hellonode-service
+  labels:
+    app: app-hellonode
+spec:
+  type: NodePort 
+  ports:
+  - port: 80
+    targetPort: 3001
+    protocol: TCP
+  selector:
+    app: app-hellonode
